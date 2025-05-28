@@ -85,10 +85,10 @@ WSGI_APPLICATION = 'pixel.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'books',
-        'USER': 'meuusuario',
-        'PASSWORD': 'minhasenha',
-        'HOST': 'localhost',   # ou IP do host do banco
+        'NAME': 'library',
+        'USER': 'dbadmin',
+        'PASSWORD': '123456',
+        'HOST': 'library-db',   # ou IP do host do banco
         'PORT': '5432',
     }
 }
@@ -129,9 +129,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-]
+# STATICFILES_DIRS = [
+#     BASE_DIR / "static",
+# ]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field

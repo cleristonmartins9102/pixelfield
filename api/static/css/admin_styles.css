@@ -1,0 +1,57 @@
+.container {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+.wrap_list {
+  padding: 60px;
+}
+
+.header {
+  padding: 8px 0 8px 0;
+}
+
+input {
+  width: 100% !important;
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  line-height: 60px;
+}
+
+header .business_name {
+  padding: 0 8px 0 8px;
+  font-weight: 800;
+  background-color: #fff;
+  color: #333;
+}
+
+.btn_login {
+  border: 1px solid #fff !important;
+}
+
+.btn_login:hover {
+  color: #333 !important;
+  background-color: #fff !important;
+}
+
+
+.btn_geen {
+  background-color: green !important;
+}
+.btn_red {
+  background-color: rgb(149, 30, 6) !important;
+}
+
+
+.btn_geen:hover {
+  border: 1px solid green !important;
+  background-color: rgba(51, 173, 51, 0.5) !important;
+}

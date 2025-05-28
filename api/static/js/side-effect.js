@@ -18,7 +18,17 @@ export class SideEffect {
     this.body.appendChild(bScreen)
   }
 
-  dialog (message) {
+  blackScreenOff() {
+    const dialogElement = document.querySelector('[dialog-name="borrow"]')
+    const screen = document.querySelector('[name="bscreen"]')
+    if (dialogElement) {
+      dialogElement.remove()
+    }
+    screen.remove()
+  }
+
+
+  dialog (message, el=null, btnAction = { fn: null, label: null }) {
     const closeAction = () => {
       const dialogElement = document.querySelector('[dialog-name="borrow"]')
       const screen = document.querySelector('[name="bscreen"]')
@@ -28,11 +38,11 @@ export class SideEffect {
     const screen = document.createElement('div')
     const wrapContent = document.createElement('div')
     const buttonClose = document.createElement('button')
-    buttonClose.innerText = 'Close'
+    buttonClose.innerText = btnAction.label ?? 'Close'
     buttonClose.classList.add('btn')
     buttonClose.classList.add('btn_geen')
     screen.style.position = 'absolute'
-    screen.style.height = '200px'
+    // screen.style.height = '200px'
     screen.style.width = '300px'
     screen.style.background = '#fff'
     screen.style.top = '50%';
@@ -55,10 +65,10 @@ export class SideEffect {
     text.style.textAlign = 'center'
     text.style.fontSize = '22px'
     text.textContent = message
-    wrapContent.appendChild(text)
+    wrapContent.appendChild(el ?? text)
     screen.appendChild(wrapContent)
     screen.appendChild(buttonClose)
     this.body.appendChild(screen)
-    buttonClose.onclick = closeAction
+    buttonClose.onclick = btnAction.fn ?? closeAction
   }
 }

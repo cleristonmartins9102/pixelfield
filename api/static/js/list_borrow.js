@@ -10,7 +10,7 @@ const returnBook = (book_id) => {
   .request({ method: 'POST', url: '/api/loan/delete_loan/', data: { book_id },  headers: { 'content-type': 'application/json', Authorization: `Bearer ${token}` } })
   .then(response => {
     if (response.status === 204) {
-      document.querySelector(`[row="${book_id}"]`).remove()
+      window.location.href = '/borrow'
     }
   })
   .catch(error => console.log(error))

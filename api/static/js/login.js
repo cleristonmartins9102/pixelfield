@@ -6,16 +6,20 @@ btn_sign.addEventListener('click', (e) => {
     username: document.querySelector('#username').value,
     password: document.querySelector('#password').value
   }
-
   axios
-    .request({ method: 'POST', url: '/api/login/', data: form }, { Headers: { 'content-type': 'application/json'}})
+      .request({ method: 'POST', url: '/api/login/', data: form }, { Headers: { 'content-type': 'application/json'}})
     .then(response => {
       error_element.innerHTML = null
       localStorage.setItem('currentUser', JSON.stringify(response.data))
-      window.location.href = '/books/'
+      if (response.data.role === 'admin') {
+        window.location.href = '/admin/'
+      } else {
+        window.location.href = document.referrer ?? '/books/'
+      }
     })
     .catch(error => {
       console.log(error)
       error_element.innerHTML = error.response.data.detail
     }) 
 })
+
