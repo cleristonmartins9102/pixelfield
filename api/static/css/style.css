@@ -1,0 +1,55 @@
+.container {
+  padding: 60px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  line-height: 60px;
+}
+
+header .business_name {
+  padding: 0 8px 0 8px;
+  font-weight: 800;
+  background-color: #fff;
+  color: #333;
+}
+
+.btn_login {
+  border: 1px solid #fff !important;
+}
+
+.btn_login:hover {
+  color: #333 !important;
+  background-color: #fff !important;
+}
+
+.btn {
+  cursor: pointer;
+  color: #fff !important;
+}
+
+.btn_disabled {
+  cursor: none !important;
+  pointer-events: none;
+  background-color: rgb(132, 132, 132) !important;
+}
+
+.btn_geen {
+    background-color: green !important;
+}
+
+.btn_geen:hover {
+  border: 1px solid green !important;
+  background-color: rgba(51, 173, 51, 0.5) !important;
+}
+
+.btn_borrow {
+  width: 100%;
+}
+
+
+
