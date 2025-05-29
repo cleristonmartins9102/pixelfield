@@ -30,6 +30,16 @@
 
 ---
 
+## UI Routers
+
+| Method   | Route     | Description                                   |
+| -------- | --------- | --------------------------------------------  |
+| GET      | /login/   | Authentication page                           |
+| GET      | /admin/   | Administrator area [Manager books and users]  |
+| GET      | /books    | List of books                                 |
+| GET      | /borrow   | List of borrowed books                        |
+| GET      | /swegger  | API Documentation                             |
+
 ## Main API routes
 
 | Method   | Route     | Description                      |
